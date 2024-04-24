@@ -170,14 +170,8 @@ public class UserDaoImpl implements UserDao {
             );
             res.add(userPurchaseEntity);
         }
-        res.sort(
-                new Comparator<>() {
-                    @Override
-                    public int compare(UserPurchaseEntity o1, UserPurchaseEntity o2) {
-                        return o2.getPurchasePrice().compareTo(o1.getPurchasePrice());
-                    }
-                }
-        );
+
+        res.sort((o1, o2) -> o2.getPurchasePrice().compareTo(o1.getPurchasePrice()));
         return res;
     }
 }
