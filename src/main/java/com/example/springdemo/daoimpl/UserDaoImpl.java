@@ -171,7 +171,6 @@ public class UserDaoImpl implements UserDao {
             res.add(userPurchaseEntity);
         }
 
-        res.sort((o1, o2) -> o2.getPurchasePrice().compareTo(o1.getPurchasePrice()));
         return res;
     }
 }

@@ -30,6 +30,10 @@ public class BookEntity {
     @Basic
     @Column(name = "author")
     private String author;
+
+    public BookEntity() {
+    }
+
     @Basic
     @Column(name = "price")
     private BigDecimal price;
@@ -43,6 +47,16 @@ public class BookEntity {
     @Column(name = "image")
     private String image;
 
+    public BookEntity(String isbn, String name, String type, String author, BigDecimal price, String description, Integer inventory, String image) {
+        this.isbn = isbn;
+        this.name = name;
+        this.type = type;
+        this.author = author;
+        this.price = price;
+        this.description = description;
+        this.inventory = inventory;
+        this.image = image;
+    }
 
 
     public int getId() {
@@ -117,37 +131,4 @@ public class BookEntity {
         this.image = image;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        BookEntity that = (BookEntity) o;
-
-        if (id != that.id) return false;
-        if (isbn != null ? !isbn.equals(that.isbn) : that.isbn != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (type != null ? !type.equals(that.type) : that.type != null) return false;
-        if (author != null ? !author.equals(that.author) : that.author != null) return false;
-        if (price != null ? !price.equals(that.price) : that.price != null) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
-        if (inventory != null ? !inventory.equals(that.inventory) : that.inventory != null) return false;
-        if (image != null ? !image.equals(that.image) : that.image != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (isbn != null ? isbn.hashCode() : 0);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (type != null ? type.hashCode() : 0);
-        result = 31 * result + (author != null ? author.hashCode() : 0);
-        result = 31 * result + (price != null ? price.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (inventory != null ? inventory.hashCode() : 0);
-        result = 31 * result + (image != null ? image.hashCode() : 0);
-        return result;
-    }
 }

@@ -38,10 +38,6 @@ public class OrderlistEntity {
     @JoinColumn( name = "order_id", referencedColumnName ="order_id",insertable = false,updatable = false)
     private TableOrderEntity tableOrderEntity;
 
-    public TableOrderEntity getTableOrderEntity() {
-        return tableOrderEntity;
-    }
-
     public void setTableOrderEntity(TableOrderEntity tableOrderEntity) {
         this.tableOrderEntity = tableOrderEntity;
     }
@@ -50,67 +46,16 @@ public class OrderlistEntity {
         return book;
     }
 
-    public void setBook(BookEntity book) {
-        this.book = book;
-    }
+
 
     public OrderlistEntity() {
     }
 
-    public OrderlistEntity(Integer orderId, Integer bookCount, BookEntity book, Double totalPrice) {
-        this.orderId = orderId;
-        this.bookCount = bookCount;
-        this.totalPrice = totalPrice;
-        this.book=book;
-    }
-
-    public int getOrderListId() {
-        return orderListId;
-    }
-
-    public void setOrderListId(int orderListId) {
-        this.orderListId = orderListId;
-    }
-
-    public Integer getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(Integer orderId) {
-        this.orderId = orderId;
-    }
 
     public Integer getBookCount() {
         return bookCount;
     }
 
-    public void setBookCount(Integer bookCount) {
-        this.bookCount = bookCount;
-    }
-
-
-    public Double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(Double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        OrderlistEntity that = (OrderlistEntity) o;
-
-        if (orderListId != that.orderListId) return false;
-        if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
-        if (bookCount != null ? !bookCount.equals(that.bookCount) : that.bookCount != null) return false;
-        if (totalPrice != null ? !totalPrice.equals(that.totalPrice) : that.totalPrice != null) return false;
-
-        return true;
-    }
 
     @Override
     public int hashCode() {

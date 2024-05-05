@@ -79,31 +79,6 @@ public class UserEntity {
         this.address = address;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        UserEntity that = (UserEntity) o;
-
-        if (userId != that.userId) return false;
-        if (nickname != null ? !nickname.equals(that.nickname) : that.nickname != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (tel != null ? !tel.equals(that.tel) : that.tel != null) return false;
-        if (address != null ? !address.equals(that.address) : that.address != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = userId;
-        result = 31 * result + (nickname != null ? nickname.hashCode() : 0);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (tel != null ? tel.hashCode() : 0);
-        result = 31 * result + (address != null ? address.hashCode() : 0);
-        return result;
-    }
 
     public String getState() {
         return state;
@@ -117,7 +92,4 @@ public class UserEntity {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
 }

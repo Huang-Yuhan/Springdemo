@@ -51,10 +51,6 @@ public class TableOrderEntity {
         return orderId;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
-    }
-
     public Double getTotalPrice() {
         return totalPrice;
     }
@@ -71,33 +67,11 @@ public class TableOrderEntity {
         this.userId = userId;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        TableOrderEntity that = (TableOrderEntity) o;
-
-        if (orderId != that.orderId) return false;
-        if (totalPrice != null ? !totalPrice.equals(that.totalPrice) : that.totalPrice != null) return false;
-        if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = orderId;
-        result = 31 * result + (totalPrice != null ? totalPrice.hashCode() : 0);
-        result = 31 * result + (userId != null ? userId.hashCode() : 0);
-        return result;
+    public void setPurchaseTime(Timestamp purchaseTime) {
+        this.purchaseTime = purchaseTime;
     }
 
     public Timestamp getPurchaseTime() {
         return purchaseTime;
-    }
-
-    public void setPurchaseTime(Timestamp purchaseTime) {
-        this.purchaseTime = purchaseTime;
     }
 }

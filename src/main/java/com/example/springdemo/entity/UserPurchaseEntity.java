@@ -2,7 +2,7 @@ package com.example.springdemo.entity;
 
 import java.math.BigDecimal;
 
-public class UserPurchaseEntity {
+public class UserPurchaseEntity{
     private Integer id;
     private String name;
     private BigDecimal purchasePrice;
@@ -21,19 +21,4 @@ public class UserPurchaseEntity {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public BigDecimal getPurchasePrice() {
-        return purchasePrice;
-    }
-
-    public void setPurchasePrice(BigDecimal purchasePrice) {
-        this.purchasePrice = purchasePrice;
-    }
 }
