@@ -7,6 +7,14 @@ public class UserPurchaseEntity{
     private String name;
     private BigDecimal purchasePrice;
 
+    public String getName() {
+        return name;
+    }
+
+    public BigDecimal getPurchasePrice() {
+        return purchasePrice;
+    }
+
     public UserPurchaseEntity(Integer id, String name, BigDecimal pucharasePrice) {
         this.id = id;
         this.name = name;

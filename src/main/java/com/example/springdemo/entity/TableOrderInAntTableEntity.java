@@ -10,6 +10,22 @@ public class TableOrderInAntTableEntity {
     private String userName;
     private Timestamp purchaseTime;
 
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public Double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public Timestamp getPurchaseTime() {
+        return purchaseTime;
+    }
+
     public void setOrderId(int orderId) {
         this.orderId = orderId;
     }
